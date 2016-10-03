@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ReferencesFactory {
-    private static ReferencesFactory referencesFactory;
+    private static ReferencesFactory referencesFactory = new ReferencesFactory();
 
     private Map<String, Integer> references;
 
