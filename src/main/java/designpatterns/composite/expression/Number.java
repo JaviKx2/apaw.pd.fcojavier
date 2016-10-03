@@ -12,4 +12,11 @@ public class Number extends Expression {
         return this.number;
     }
 
+	@Override
+	public String toString() {
+		return String.valueOf(number);
+	}
+    
+    
+
 }

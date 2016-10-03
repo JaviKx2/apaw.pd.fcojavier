@@ -8,11 +8,12 @@ public class Subtraction extends ExpressionCompositeNode{
 
     @Override
     public int operate() {
-        int result = 0;
-        for(Expression expression : expressions){
-            result -= expression.operate();
-        }
-        return result;
+        return expressions[0].operate() - expressions[1].operate();
     }
+    
+    @Override
+	public String toString() {
+		return "(" + expressions[0].toString() + "-" + expressions[1].toString() + ")";
+	}
 
 }
