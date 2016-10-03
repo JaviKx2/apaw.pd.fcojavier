@@ -1,7 +1,5 @@
 package designpatterns.state.connection;
 
-import es.upm.miw.pd.state.connection.Link;
-
 public final class LinkMock implements Link {
     private String msg;
 
