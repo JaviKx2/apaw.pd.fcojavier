@@ -11,6 +11,7 @@ public class Conexion {
         assert link != null;
         this.link = link;
         this.estado = Estado.CERRADO;
+        this.state = new Stopped();
     }
 
     public Link getLink() {
@@ -23,6 +24,10 @@ public class Conexion {
     
     public void setState(State state){
         this.state = state;
+    }
+    
+    public void setEstado(Estado estado){
+    	this.estado = estado;
     }
 
     public void abrir() {
@@ -42,10 +47,10 @@ public class Conexion {
     }
     
     public void enviar(String message) {
-        state.abrir(this);
+        state.enviar(this, message);
     }
     
     public void recibir(int number) {
-        state.abrir(this);
+        state.recibir(this, number);
     }
 }
