@@ -8,24 +8,44 @@ import org.junit.Test;
 public class NaturalNumberManagerTest {
     NaturalNumberManager naturalNumberManager;
 
+    NaturalNumberCreator naturalNumberCreator;
+
     @Before
     public void setUp() {
         naturalNumberManager = new NaturalNumberManager();
     }
 
     @Test
-    public void testCreateNaturalNumber() {
-        fail("Not yet implemented");
-    }
+    public void testNaturalNumberManager() {
+        naturalNumberCreator = new NaturalNumberEnCreator();
+        naturalNumberManager.setNaturalNumberCreator(naturalNumberCreator);
+        naturalNumberManager.createNaturalNumber(0);
+        assertEquals(naturalNumberManager.getNaturalNumber().getValue(), new NaturalNumberEn(0).getValue());
+        assertEquals(naturalNumberManager.getNaturalNumber().getTextValue(), new NaturalNumberEn(0).getTextValue());
 
-    @Test
-    public void testSetNaturalNumberCreator() {
-        fail("Not yet implemented");
-    }
+        naturalNumberManager.createNaturalNumber(1);
+        assertEquals(naturalNumberManager.getNaturalNumber().getValue(), new NaturalNumberEn(1).getValue());
+        assertEquals(naturalNumberManager.getNaturalNumber().getTextValue(), new NaturalNumberEn(1).getTextValue());
 
-    @Test
-    public void testGetNaturalNumber() {
-        fail("Not yet implemented");
+        naturalNumberManager.createNaturalNumber(2);
+        assertEquals(naturalNumberManager.getNaturalNumber().getValue(), new NaturalNumberEn(2).getValue());
+        assertEquals(naturalNumberManager.getNaturalNumber().getTextValue(), new NaturalNumberEn(2).getTextValue());
+
+        naturalNumberManager.createNaturalNumber(3);
+        assertEquals(naturalNumberManager.getNaturalNumber().getValue(), new NaturalNumberEn(3).getValue());
+        assertEquals(naturalNumberManager.getNaturalNumber().getTextValue(), new NaturalNumberEn(3).getTextValue());
+
+        naturalNumberManager.createNaturalNumber(4);
+        assertEquals(naturalNumberManager.getNaturalNumber().getValue(), new NaturalNumberEn(4).getValue());
+        assertEquals(naturalNumberManager.getNaturalNumber().getTextValue(), new NaturalNumberEn(4).getTextValue());
+
+        naturalNumberManager.createNaturalNumber(5);
+        assertEquals(naturalNumberManager.getNaturalNumber().getValue(), new NaturalNumberEn(5).getValue());
+        assertEquals(naturalNumberManager.getNaturalNumber().getTextValue(), new NaturalNumberEn(5).getTextValue());
+
+        naturalNumberManager.createNaturalNumber(6);
+        assertEquals(naturalNumberManager.getNaturalNumber().getValue(), new NaturalNumberEn(6).getValue());
+        assertEquals(naturalNumberManager.getNaturalNumber().getTextValue(), new NaturalNumberEn(6).getTextValue());
     }
 
 }

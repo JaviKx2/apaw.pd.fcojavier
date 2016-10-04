@@ -12,7 +12,7 @@ public abstract class NaturalNumber {
     }
 
     public void setValue(int value) {
-        assert value >= 0 && value <= 5;
+        assert value >= 0;
         this.value = value;
     }
 
