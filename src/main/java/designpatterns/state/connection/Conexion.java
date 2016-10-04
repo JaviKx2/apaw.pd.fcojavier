@@ -1,8 +1,6 @@
 package designpatterns.state.connection;
 
 public class Conexion {
-    private Estado estado;
-    
     private State state;
 
     private Link link;
@@ -10,7 +8,6 @@ public class Conexion {
     public Conexion(Link link) {
         assert link != null;
         this.link = link;
-        this.estado = Estado.CERRADO;
         this.state = new Closed();
     }
 
@@ -19,38 +16,38 @@ public class Conexion {
     }
 
     public Estado getEstado() {
-        return this.estado;
+        return this.state.getEstado();
     }
-    
-    public void setState(State state){
+
+    public void setState(State state) {
         this.state = state;
-    }
-    
-    public void setEstado(Estado estado){
-    	this.estado = estado;
     }
 
     public void abrir() {
         state.abrir(this);
     }
-    
+
     public void cerrar() {
         state.cerrar(this);
     }
-    
+
     public void parar() {
         state.parar(this);
     }
-    
+
     public void iniciar() {
         state.iniciar(this);
     }
-    
+
     public void enviar(String message) {
         state.enviar(this, message);
     }
-    
+
     public void recibir(int number) {
         state.recibir(this, number);
+    }
+    
+    public void accionNoPermitida(){
+        throw new UnsupportedOperationException("Acción no permitida... ");
     }
 }
