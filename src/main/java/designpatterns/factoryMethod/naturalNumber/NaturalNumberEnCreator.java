@@ -1,10 +1,10 @@
 package designpatterns.factoryMethod.naturalNumber;
 
-public class NaturalNumberEnCreator extends NaturalNumberCreator{
+public class NaturalNumberEnCreator extends NaturalNumberCreator {
 
     @Override
-    protected NaturalNumber createNaturalNumber() {
-        return new NaturalNumberEn(0);
+    protected NaturalNumber createNaturalNumber(int value) {
+        return new NaturalNumberEn(value);
     }
 
 }

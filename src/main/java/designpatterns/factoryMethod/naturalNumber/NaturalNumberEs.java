@@ -1,8 +1,6 @@
 package designpatterns.factoryMethod.naturalNumber;
 
-public class NaturalNumberEs extends NaturalNumber{
-    private int value;
-
+public class NaturalNumberEs extends NaturalNumber {
     private static final String[] textValue = {"Cero", "Uno", "Dos", "Tres", "Cuatro", "Cinco"};
 
     public NaturalNumberEs(int value) {
@@ -10,12 +8,7 @@ public class NaturalNumberEs extends NaturalNumber{
     }
 
     @Override
-    public String getTextValue() {
-        if (this.value < textValue.length) {
-            return NaturalNumberEs.textValue[this.value];
-        } else {
-            return "???";
-        }
+    public String[] getTextValues() {
+        return textValue;
     }
-
 }
