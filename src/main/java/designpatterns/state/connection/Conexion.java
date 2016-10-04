@@ -11,7 +11,7 @@ public class Conexion {
         assert link != null;
         this.link = link;
         this.estado = Estado.CERRADO;
-        this.state = new Stopped();
+        this.state = new Closed();
     }
 
     public Link getLink() {

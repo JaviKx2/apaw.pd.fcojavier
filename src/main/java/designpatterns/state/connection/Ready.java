@@ -21,7 +21,7 @@ public class Ready extends State{
     @Override
     public void parar(Conexion conexion) {
         conexion.setState(new Stopped());  
-        conexion.setEstado(Estado.CERRADO);
+        conexion.setEstado(Estado.PARADO);
     }
 
     @Override
