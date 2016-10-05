@@ -8,20 +8,24 @@ public class Square extends Figure {
         super(description);
         this.side = side;
     }
-
-    @Override
-    public double area() {
-        return side * side;
-    }
-
-    @Override
-    public double numberOfSides() {
-        return 4;
+    
+    public double getSide(){
+        return side;
     }
 
     @Override
     public String toString() {
         return super.toString();
+    }
+
+    @Override
+    public void acceptVisitFrom(AreaManager areaManager) {
+        areaManager.handleVisitFrom(this);        
+    }
+
+    @Override
+    public void acceptVisitFrom(SidesManager sidesManager) {
+        sidesManager.handleVisitFrom(this);        
     }
 
 }

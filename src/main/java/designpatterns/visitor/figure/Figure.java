@@ -4,8 +4,9 @@ public abstract class Figure {
 
     public Figure(String description) {
     }
-    
-    public abstract double area();
-    public abstract double numberOfSides();
+
+    public abstract void acceptVisitFrom(AreaManager areaManager);
+
+    public abstract void acceptVisitFrom(SidesManager sidesManager);
 
 }
