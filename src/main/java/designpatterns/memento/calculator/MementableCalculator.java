@@ -1,6 +1,6 @@
 package designpatterns.memento.calculator;
 
-import designpatterns.commando.calculator.Calculator;
+import designpatterns.command.calculator.Calculator;
 
 public class MementableCalculator extends Calculator implements Mementable<MementableCalculatorMemento>{
      

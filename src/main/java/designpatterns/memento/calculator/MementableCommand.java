@@ -1,7 +1,7 @@
 package designpatterns.memento.calculator;
 
-import designpatterns.commando.calculator.Calculator;
-import designpatterns.commando.calculator.ComandoConcreto;
+import designpatterns.command.calculator.Calculator;
+import designpatterns.command.calculator.ComandoConcreto;
 
 public abstract class MementableCommand extends ComandoConcreto{
 

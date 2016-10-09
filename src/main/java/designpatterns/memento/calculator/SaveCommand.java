@@ -1,6 +1,6 @@
 package designpatterns.memento.calculator;
 
-import designpatterns.commando.calculator.Calculator;
+import designpatterns.command.calculator.Calculator;
 import upm.jbb.IO;
 
 public class SaveCommand extends MementableCommand{

@@ -1,11 +1,11 @@
 package designpatterns.memento.calculator;
 
-import designpatterns.commando.calculator.AddCommand;
-import designpatterns.commando.calculator.Calculator;
-import designpatterns.commando.calculator.CommandManager;
-import designpatterns.commando.calculator.PrintCommand;
-import designpatterns.commando.calculator.ResetCommand;
-import designpatterns.commando.calculator.SubtractCommand;
+import designpatterns.command.calculator.AddCommand;
+import designpatterns.command.calculator.Calculator;
+import designpatterns.command.calculator.CommandManager;
+import designpatterns.command.calculator.PrintCommand;
+import designpatterns.command.calculator.ResetCommand;
+import designpatterns.command.calculator.SubtractCommand;
 import upm.jbb.IO;
 
 public class MainMementableCalculator {

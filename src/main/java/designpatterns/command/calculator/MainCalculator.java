@@ -1,4 +1,4 @@
-package designpatterns.commando.calculator;
+package designpatterns.command.calculator;
 
 import upm.jbb.IO;
 

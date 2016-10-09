@@ -1,4 +1,4 @@
-package designpatterns.commando.calculator;
+package designpatterns.command.calculator;
 
 public abstract class ComandoConcreto implements Comando{
     protected Calculator calculator;

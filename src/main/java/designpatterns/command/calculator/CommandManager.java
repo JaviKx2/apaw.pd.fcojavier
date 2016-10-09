@@ -1,4 +1,4 @@
-package designpatterns.commando.calculator;
+package designpatterns.command.calculator;
 
 import java.util.HashMap;
 import java.util.Map;
