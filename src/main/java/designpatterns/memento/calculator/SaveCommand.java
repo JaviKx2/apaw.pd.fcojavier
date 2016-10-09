@@ -12,7 +12,7 @@ public class SaveCommand extends MementableCommand{
     @Override
     public void execute() {
         String mementoName = IO.getIO().readString("Restore point name");
-        MementableCalculatorMemento memento = new MementableCalculatorMemento(calculator.getTotal());
+        MementableCalculatorMemento memento = ((MementableCalculator) calculator).createMemento();
         getMementoManager().addMemento(mementoName, memento);
     }
 
