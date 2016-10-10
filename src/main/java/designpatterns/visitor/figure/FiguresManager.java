@@ -14,6 +14,10 @@ public class FiguresManager {
     public void add(Figure figure) {
         figures.add(figure);
     }
+    
+    public void add(List<Figure> figures){
+    	this.figures.addAll(figures);
+    }
 
     public double totalArea() {
         AreaManager areaManager = new AreaManager();
@@ -26,7 +30,7 @@ public class FiguresManager {
     public double totalNumberOfSides() {
         SidesManager sidesManager = new SidesManager();
         for (Figure figure : figures) {
-            figure.acceptVisitFrom(sidesManager);;
+            figure.acceptVisitFrom(sidesManager);
         }
         return sidesManager.getSides();
     }
