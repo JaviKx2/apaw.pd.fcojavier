@@ -10,4 +10,13 @@ public abstract class ExpressionCompositeNode extends Expression {
 	}
 
 	public abstract int operate();
+	
+	public abstract String symbol();
+
+	@Override
+	public String toString() {
+		return "(" + expressions[0].toString() + symbol() + expressions[1].toString() + ")";
+	}
+	
+	
 }

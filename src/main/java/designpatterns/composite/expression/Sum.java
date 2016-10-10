@@ -10,10 +10,10 @@ public class Sum extends ExpressionCompositeNode{
     public int operate() {
     	return expressions[0].operate() + expressions[1].operate();
     }
-    
-    @Override
-	public String toString() {
-		return "(" + expressions[0].toString() + "+" + expressions[1].toString() + ")";
+
+	@Override
+	public String symbol() {
+		return "+";
 	}
 
 }

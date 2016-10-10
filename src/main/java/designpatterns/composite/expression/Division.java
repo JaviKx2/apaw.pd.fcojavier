@@ -12,8 +12,8 @@ public class Division extends ExpressionCompositeNode {
 	}
 
 	@Override
-	public String toString() {
-		return "(" + expressions[0].toString() + "/" + expressions[1].toString() + ")";
+	public String symbol() {
+		return "/";
 	}
 
 }
