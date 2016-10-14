@@ -5,19 +5,28 @@ import java.util.Map;
 
 public class FactoriaCaracter {
 	private Map<Character, Caracter> characters;
+
 	private static FactoriaCaracter factoriaCaracter;
-	
-	private FactoriaCaracter(){
+
+	private FactoriaCaracter() {
 		characters = new HashMap<>();
 	}
-	
-	public Caracter get(char character){
-		return characters.get(character);
+
+	public Caracter get(char character) {
+		Caracter caracter = characters.get(character);
+		if (caracter == null) {
+			caracter = new Caracter(character);
+			characters.put(character, caracter);
+			return caracter;
+		} else {
+			return characters.get(character);
+		}
 	}
-	
-	public static FactoriaCaracter getFactoria(){
-		if(factoriaCaracter == null)
-			return new FactoriaCaracter();
+
+	public static FactoriaCaracter getFactoria() {
+		if (factoriaCaracter == null) {
+			factoriaCaracter = new FactoriaCaracter();
+		}
 		return factoriaCaracter;
 	}
 }

@@ -1,23 +1,17 @@
 package designpatterns.text;
 
-public class Texto extends TextComposite{
-
+public class Texto extends TextComposite {
 	@Override
-	public void add(Componente component) {
-		// TODO Auto-generated method stub
-		
+	public boolean check(Componente component) {
+		if (component instanceof Caracter) {
+			throw new UnsupportedOperationException();
+		}
+		return true;
 	}
 
 	@Override
-	public void remove(Componente component) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public String dibujar(boolean uppercase) {
-		return "";
-		
+	public String ending() {
+		return "---o---\n";
 	}
 
 }
