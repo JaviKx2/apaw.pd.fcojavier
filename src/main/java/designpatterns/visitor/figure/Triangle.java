@@ -5,8 +5,7 @@ public class Triangle extends Figure {
 
     private double height;
 
-    public Triangle(String description, double base, double height) {
-        super(description);
+    public Triangle(double base, double height) {
         this.base = base;
         this.height = height;
     }
